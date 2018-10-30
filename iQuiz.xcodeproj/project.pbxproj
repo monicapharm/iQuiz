@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29063B2B2187F8F200C8E615 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29063B2A2187F8F200C8E615 /* AppData.swift */; };
+		29063B2D2187FACF00C8E615 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29063B2C2187FACF00C8E615 /* QAViewController.swift */; };
 		298433C4218679A1007FEB84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298433C3218679A1007FEB84 /* AppDelegate.swift */; };
 		298433C6218679A1007FEB84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298433C5218679A1007FEB84 /* ViewController.swift */; };
 		298433C9218679A1007FEB84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298433C7218679A1007FEB84 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29063B2A2187F8F200C8E615 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		29063B2C2187FACF00C8E615 /* QAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
 		298433C0218679A1007FEB84 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		298433C3218679A1007FEB84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		298433C5218679A1007FEB84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				298433CA218679A3007FEB84 /* Assets.xcassets */,
 				298433CC218679A3007FEB84 /* LaunchScreen.storyboard */,
 				298433CF218679A3007FEB84 /* Info.plist */,
+				29063B2A2187F8F200C8E615 /* AppData.swift */,
+				29063B2C2187FACF00C8E615 /* QAViewController.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				298433C6218679A1007FEB84 /* ViewController.swift in Sources */,
+				29063B2D2187FACF00C8E615 /* QAViewController.swift in Sources */,
 				298433C4218679A1007FEB84 /* AppDelegate.swift in Sources */,
 				298433F221867FD1007FEB84 /* QuizTableViewCell.swift in Sources */,
+				29063B2B2187F8F200C8E615 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

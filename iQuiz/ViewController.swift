@@ -8,19 +8,25 @@
 
 import UIKit
 
-class Quiz {
-    let subjects = ["Art", "Science", "Music"]
-    let description = ["Quiz on Art", "Quiz on Science", "Quiz on Music"]
-    let images = [UIImage(named: "art"), UIImage(named: "science"), UIImage(named: "music")]
-}
+//class Quiz {
+//    let subjects = ["Art", "Science", "Music"]
+//    let description = ["Quiz on Art", "Quiz on Science", "Quiz on Music"]
+//    let images = [UIImage(named: "art"), UIImage(named: "science"), UIImage(named: "music")]
+//}
 
 class QuizDataSource : NSObject, UITableViewDataSource {
     
-    init(quiz: Quiz){
+//    init(quiz: Quiz){
+//        self.quiz = quiz
+//    }
+    
+    // var quiz = AppData.shared
+    
+    let quiz: AppData
+    
+    init(quiz: AppData){
         self.quiz = quiz
     }
-    
-    let quiz: Quiz
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quiz.subjects.count;
@@ -29,7 +35,7 @@ class QuizDataSource : NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell") as! QuizTableViewCell
         cell.quizTitle.text = quiz.subjects[indexPath.row]
-        cell.quizDescription.text = quiz.description[indexPath.row]
+        cell.quizDescription.text = quiz.descr[indexPath.row]
         cell.quizImage.image = quiz.images[indexPath.row]
         return cell
     }
@@ -37,6 +43,8 @@ class QuizDataSource : NSObject, UITableViewDataSource {
 }
 
 class ViewController: UIViewController, UITableViewDelegate {
+
+    var appdata = AppData.shared
 
     @IBAction func settings(_ sender: Any) {
         let uiAlert = UIAlertController(title: "Settings", message: "Check back for settings!", preferredStyle: .alert)
@@ -46,7 +54,12 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let dataSource = QuizDataSource(quiz: Quiz())
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        appdata.topicIdx = indexPath.row
+        performSegue(withIdentifier: "segueGoToQuestion", sender: self)
+    }
+    
+    let dataSource = QuizDataSource(quiz: AppData())
     
     override func viewDidLoad() {
         super.viewDidLoad()
