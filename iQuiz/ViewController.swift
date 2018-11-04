@@ -8,12 +8,6 @@
 
 import UIKit
 
-//class Quiz {
-//    let subjects = ["Art", "Science", "Music"]
-//    let description = ["Quiz on Art", "Quiz on Science", "Quiz on Music"]
-//    let images = [UIImage(named: "art"), UIImage(named: "science"), UIImage(named: "music")]
-//}
-
 class QuizDataSource : NSObject, UITableViewDataSource {
     
 //    init(quiz: Quiz){
