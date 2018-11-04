@@ -18,6 +18,7 @@
 		298433E4218679A4007FEB84 /* iQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298433E3218679A4007FEB84 /* iQuizUITests.swift */; };
 		298433F221867FD1007FEB84 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298433F121867FD1007FEB84 /* QuizTableViewCell.swift */; };
 		29C79B64218F652A002A3BC5 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C79B63218F652A002A3BC5 /* AnswerViewController.swift */; };
+		29C79BA0218F84BD002A3BC5 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C79B9F218F84BD002A3BC5 /* FinalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		298433E5218679A4007FEB84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		298433F121867FD1007FEB84 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		29C79B63218F652A002A3BC5 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		29C79B9F218F84BD002A3BC5 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +108,16 @@
 			isa = PBXGroup;
 			children = (
 				298433C3218679A1007FEB84 /* AppDelegate.swift */,
-				298433C5218679A1007FEB84 /* ViewController.swift */,
+				29063B2A2187F8F200C8E615 /* AppData.swift */,
 				298433F121867FD1007FEB84 /* QuizTableViewCell.swift */,
+				298433C5218679A1007FEB84 /* ViewController.swift */,
+				29063B2C2187FACF00C8E615 /* QuestionViewController.swift */,
+				29C79B63218F652A002A3BC5 /* AnswerViewController.swift */,
+				29C79B9F218F84BD002A3BC5 /* FinalViewController.swift */,
 				298433C7218679A1007FEB84 /* Main.storyboard */,
 				298433CA218679A3007FEB84 /* Assets.xcassets */,
 				298433CC218679A3007FEB84 /* LaunchScreen.storyboard */,
 				298433CF218679A3007FEB84 /* Info.plist */,
-				29063B2A2187F8F200C8E615 /* AppData.swift */,
-				29063B2C2187FACF00C8E615 /* QuestionViewController.swift */,
-				29C79B63218F652A002A3BC5 /* AnswerViewController.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29C79B64218F652A002A3BC5 /* AnswerViewController.swift in Sources */,
+				29C79BA0218F84BD002A3BC5 /* FinalViewController.swift in Sources */,
 				298433C6218679A1007FEB84 /* ViewController.swift in Sources */,
 				29063B2D2187FACF00C8E615 /* QuestionViewController.swift in Sources */,
 				298433C4218679A1007FEB84 /* AppDelegate.swift in Sources */,

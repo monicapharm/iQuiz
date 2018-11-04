@@ -10,12 +10,6 @@ import UIKit
 
 class QuizDataSource : NSObject, UITableViewDataSource {
     
-//    init(quiz: Quiz){
-//        self.quiz = quiz
-//    }
-    
-    // var quiz = AppData.shared
-    
     let quiz: AppData
     
     init(quiz: AppData){
@@ -29,6 +23,7 @@ class QuizDataSource : NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell") as! QuizTableViewCell
         cell.quizTitle.text = quiz.subjects[indexPath.row]
+        cell.quizTitle.font = UIFont.boldSystemFont(ofSize: 18.0)
         cell.quizDescription.text = quiz.descr[indexPath.row]
         cell.quizImage.image = quiz.images[indexPath.row]
         return cell
