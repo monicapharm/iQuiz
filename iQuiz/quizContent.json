@@ -120,59 +120,39 @@
 
         {
 
-          "text":"Which of the following is a non metal that remains liquid at room temperature?",
-
-          "answer":"4",
-
-          "answers":[
-
-            "Phosphorous",
-
-            "Chlorine",
-
-            "Helium",
-
-            "Bromine"
-
-          ]
-
-        },
-
-        {
-
-          "text":"What is the force that holds back a sliding object?",
-
-          "answer":"2",
-
-          "answers":[
-
-            "Gravity",
-
-            "Friction",
-
-            "Momentum",
-
-            "Deceleration"
-
-          ]
-
-        },
-
-        {
-
-          "text":"The average salinity of sea water is:",
+          "text":"What symphony's last movement includes a setting of Schiller's poem 'Hymn to Joy'?",
 
           "answer":"1",
 
           "answers":[
 
-            "3%",
+            "Beethoven's Ninth",
 
-            "3.5%",
+            "Bruckner's Eight",
 
-            "2.5%",
+            "Mahler's Tenth",
 
-            "D. 2%"
+            "Mozart's 40th"
+
+          ]
+
+        },
+
+        {
+
+          "text":"What band leader was known as 'the King of Swing'?",
+
+          "answer":"2",
+
+          "answers":[
+
+            "Tommy Dorsey",
+
+            "Benny Goodman",
+
+            "Guy Lombardo",
+
+            "Glenn Miller"
 
           ]
 

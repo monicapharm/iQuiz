@@ -20,37 +20,16 @@ struct Question: Codable{
     let answers: [String]
 }
 
-//class QuizDataSource : NSObject, UITableViewDataSource {
-//
-//    let quiz: AppData
-//
-//    init(quiz: AppData){
-//        self.quiz = quiz
-//    }
-//
-//
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell") as! QuizTableViewCell
-//        cell.quizTitle.text = quiz.subjects[indexPath.row]
-//        cell.quizTitle.font = UIFont.boldSystemFont(ofSize: 18.0)
-//        cell.quizDescription.text = quiz.descr[indexPath.row]
-//        cell.quizImage.image = quiz.images[indexPath.row]
-//        return cell
-//    }
-//
-//}
-
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    // var appdata = AppData.shared
     var urlTextField: UITextField = UITextField()
     let defaults = UserDefaults.standard
     var jsonData: [Quiz]? = nil
     var titles: [String] = []
     var descriptions: [String] = []
-    var elements: [String] = ["science", "marvel", "math"]
-    var jsonUrlString: String = UserDefaults.standard.string(forKey: "url") ?? "http://tednewardsandbox.site44.com/questions.json"
+    var elements: [String] = ["art", "science", "music"]
+    var jsonUrlString: String = UserDefaults.standard.string(forKey: "url") ?? "https://gist.githubusercontent.com/monicapharm/55586a739041bb57aa93e2e431f93416/raw/14018773758f0f73b1bfab8c8f3a2f50c8f7c422/quizContent.json"
+    // can also try "http://tednewardsandbox.site44.com/questions.json"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jsonData?.count ?? 0;
@@ -97,11 +76,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // appdata.topicIdx = indexPath.row
         performSegue(withIdentifier: "segueGoToQuestion", sender: self)
     }
-    
-    // let dataSource = QuizDataSource(quiz: AppData())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,13 +123,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //check which cell is pressed, and send over data
         if let indexPath = tableView.indexPathForSelectedRow{
             let categoryIndex = indexPath.row
             let questionView = segue.destination as! QAViewController

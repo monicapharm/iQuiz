@@ -31,10 +31,10 @@ class AnswerViewController: UIViewController {
         super.viewDidLoad()
         subject.text = subjectName
         subject.font = UIFont.boldSystemFont(ofSize: 20.0)
-        question.numberOfLines = 3
+        question.numberOfLines = 5
         question.text = que
         question.font = UIFont.italicSystemFont(ofSize: 15.0)
-        answer.text = jsonData?[categoryIndex].questions[curQue].answers[ans]
+        answer.text = jsonData?[categoryIndex].questions[curQue].answers[ans-1]
         answer.textColor = UIColor.orange
         if (answer.text == guessed) {
             score += 1
@@ -42,7 +42,7 @@ class AnswerViewController: UIViewController {
         } else {
             result = "Your answer is \(guessed). \n  Opps...You are wrong."
         }
-        rightOrWrong.numberOfLines = 2
+        rightOrWrong.numberOfLines = 5
         rightOrWrong.text = result
     }
     

@@ -20,12 +20,12 @@ class FinalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (finalScore == 0) {
-            text = "You need more practice!"
-        } else if (finalScore == 1) {
+        if (finalScore == numOfQuestions  ) {
+            text = "Perfect!"
+        } else if (finalScore > 0) {
             text = "Almost!"
         } else {
-            text = "Perfect!"
+            text = "You need more practice!"
         }
         subject.text = subjectName
         subject.font = UIFont.boldSystemFont(ofSize: 20.0)

@@ -10,6 +10,7 @@ import UIKit
 
 // the below is no longer needed as we read from JSON file directly
 
+/*
 class AppData: NSObject {
     
     static let shared = AppData()
@@ -38,3 +39,4 @@ class AppData: NSObject {
         Question(subject: "Music", question: "What band leader was known as 'the King of Swing'?", answers: ["A. Tommy Dorsey", "B. Benny Goodman", "C. Guy Lombardo", "D. Glenn Miller"], correctAnswer: "B. Benny Goodman")
     ]
 }
+ */

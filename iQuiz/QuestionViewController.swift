@@ -20,11 +20,8 @@ class QAViewController: UIViewController {
     
     var jsonData: [Quiz]? = nil
     var categoryIndex: Int = -1
-    
-    // var appdata = AppData.shared
     var pressedTime = 0
     var guessed = ""
-    // var idx = 0
     var totalAnswered = 0
     var score = 0
     var currentQuestion = 0
