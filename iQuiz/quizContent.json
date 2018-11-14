@@ -1,0 +1,185 @@
+
+[
+
+    { "title":"Art!", "desc": "Test your knowledge on art!",
+
+      "questions":[
+
+        {
+
+          "text":"Mixing the colors blue and red in equal proportion will produce which of the following hues?",
+
+          "answer":"2",
+
+          "answers":[
+
+            "Maroon",
+
+            "Violet",
+
+            "Orange",
+
+            "Brown"
+
+          ]
+
+        },
+
+        {
+
+          "text":"The use of which of the following camera filters most likely contributed to the vivid color of the sky in the photograph?",
+
+          "answer":"3",
+
+          "answers":[
+
+            "UV",
+
+            "diffusion",
+
+            "polarizing",
+
+            "neutral density"
+
+          ]
+        }
+      ]
+    },
+
+    { "title":"Science", "desc": "Test your knowledge on Science!",
+
+      "questions":[
+
+        {
+
+          "text":"Which of the following is a non metal that remains liquid at room temperature?",
+
+          "answer":"4",
+
+          "answers":[
+
+            "Phosphorous",
+
+            "Chlorine",
+
+            "Helium",
+
+            "Bromine"
+
+          ]
+
+        },
+
+        {
+
+          "text":"What is the force that holds back a sliding object?",
+
+          "answer":"2",
+
+          "answers":[
+
+            "Gravity",
+
+            "Friction",
+
+            "Momentum",
+
+            "Deceleration"
+
+          ]
+
+        },
+
+        {
+
+          "text":"The average salinity of sea water is:",
+
+          "answer":"1",
+
+          "answers":[
+
+            "3%",
+
+            "3.5%",
+
+            "2.5%",
+
+            "D. 2%"
+
+          ]
+
+        }
+
+      ]
+
+    },
+    
+    { "title":"Music", "desc": "Test your knowledge on Music!",
+
+      "questions":[
+
+        {
+
+          "text":"Which of the following is a non metal that remains liquid at room temperature?",
+
+          "answer":"4",
+
+          "answers":[
+
+            "Phosphorous",
+
+            "Chlorine",
+
+            "Helium",
+
+            "Bromine"
+
+          ]
+
+        },
+
+        {
+
+          "text":"What is the force that holds back a sliding object?",
+
+          "answer":"2",
+
+          "answers":[
+
+            "Gravity",
+
+            "Friction",
+
+            "Momentum",
+
+            "Deceleration"
+
+          ]
+
+        },
+
+        {
+
+          "text":"The average salinity of sea water is:",
+
+          "answer":"1",
+
+          "answers":[
+
+            "3%",
+
+            "3.5%",
+
+            "2.5%",
+
+            "D. 2%"
+
+          ]
+
+        }
+
+      ]
+
+    }
+
+]

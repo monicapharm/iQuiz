@@ -17,11 +17,15 @@ class AnswerViewController: UIViewController {
     
     var subjectName = ""
     var que = ""
-    var ans = ""
+    var ans = 0
     var guessed = ""
     var totalAnswered = 0
     var score = 0
     var result = ""
+    var curQue = 0
+    var categoryIndex = -1
+    var jsonData: [Quiz]? = nil
+    var numOfQuestions = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +34,9 @@ class AnswerViewController: UIViewController {
         question.numberOfLines = 3
         question.text = que
         question.font = UIFont.italicSystemFont(ofSize: 15.0)
-        answer.text = ans
+        answer.text = jsonData?[categoryIndex].questions[curQue].answers[ans]
         answer.textColor = UIColor.orange
-        if (ans == guessed) {
+        if (answer.text == guessed) {
             score += 1
             result = "Your answer is \(guessed). \n  Congrats! You're right!"
         } else {
@@ -48,15 +52,20 @@ class AnswerViewController: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
-        if (totalAnswered < 2) {
+        if (totalAnswered < numOfQuestions) {
             let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "question") as! QAViewController
             secondVC.totalAnswered = self.totalAnswered
             secondVC.score = score
+            secondVC.currentQuestion = curQue + 1
+            secondVC.categoryIndex = categoryIndex
+            secondVC.jsonData = jsonData
+            secondVC.numOfQuestions = numOfQuestions
             self.present(secondVC, animated: false, completion: nil)
         } else {
             let fourthVC = self.storyboard?.instantiateViewController(withIdentifier: "final") as! FinalViewController
             fourthVC.finalScore = score
             fourthVC.subjectName = subjectName
+            fourthVC.numOfQuestions = numOfQuestions
             self.present(fourthVC, animated: false, completion: nil)
         }
     }

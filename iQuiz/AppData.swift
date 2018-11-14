@@ -8,6 +8,8 @@
 
 import UIKit
 
+// the below is no longer needed as we read from JSON file directly
+
 class AppData: NSObject {
     
     static let shared = AppData()

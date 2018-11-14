@@ -16,6 +16,7 @@ class FinalViewController: UIViewController {
     var finalScore = 0
     var subjectName = ""
     var text = ""
+    var numOfQuestions = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class FinalViewController: UIViewController {
         subject.text = subjectName
         subject.font = UIFont.boldSystemFont(ofSize: 20.0)
         score.numberOfLines = 2
-        score.text = "\(text) \nYour final score is \(finalScore)/2"
+        score.text = "\(text) \nYour final score is \(finalScore)/\(numOfQuestions)"
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {

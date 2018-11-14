@@ -18,12 +18,18 @@ class QAViewController: UIViewController {
     @IBOutlet weak var btn4: UIButton!
     @IBOutlet weak var submitBtn: UIButton!
     
-    var appdata = AppData.shared
+    var jsonData: [Quiz]? = nil
+    var categoryIndex: Int = -1
+    
+    // var appdata = AppData.shared
     var pressedTime = 0
     var guessed = ""
-    var idx = 0
+    // var idx = 0
     var totalAnswered = 0
     var score = 0
+    var currentQuestion = 0
+    var correctAns = 0
+    var numOfQuestions = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +38,18 @@ class QAViewController: UIViewController {
     
     func newQuestion() {
         question.numberOfLines = 3
-        idx = appdata.topicIdx + totalAnswered * 3
-        subject.text = appdata.allQuiz[idx].subject
+        subject.text = jsonData?[categoryIndex].title
         subject.font = UIFont.boldSystemFont(ofSize: 20.0)
-        question.text = appdata.allQuiz[idx].question
+        question.text = jsonData?[categoryIndex].questions[currentQuestion].text
         question.font = UIFont.italicSystemFont(ofSize: 18.0)
-        btn1.setTitle(appdata.allQuiz[idx].answers[0], for: .normal)
-        btn2.setTitle(appdata.allQuiz[idx].answers[1], for: .normal)
-        btn3.setTitle(appdata.allQuiz[idx].answers[2], for: .normal)
-        btn4.setTitle(appdata.allQuiz[idx].answers[3], for: .normal)
+        numOfQuestions = (jsonData?[categoryIndex].questions.count)!
+        print(categoryIndex)
+        print(currentQuestion)
+        btn1.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[0], for: .normal)
+        btn2.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[1], for: .normal)
+        btn3.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[2], for: .normal)
+        btn4.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[3], for: .normal)
+        correctAns = Int((jsonData?[categoryIndex].questions[currentQuestion].answer)!)!
     }
     
     func clearAnswer() {
@@ -87,13 +96,17 @@ class QAViewController: UIViewController {
     @IBAction func submitBtnPressed(_ sender: Any) {
         totalAnswered += 1
         let thirdVC = self.storyboard?.instantiateViewController(withIdentifier: "answer") as! AnswerViewController
-        thirdVC.subjectName = appdata.allQuiz[idx].subject
+        thirdVC.subjectName = (jsonData?[categoryIndex].title)!
         thirdVC.guessed = guessed
-        thirdVC.que = appdata.allQuiz[idx].question
-        thirdVC.ans = appdata.allQuiz[idx].correctAnswer
+        thirdVC.que = question.text!
+        thirdVC.ans = correctAns
         thirdVC.totalAnswered = totalAnswered
         thirdVC.score = score
+        thirdVC.curQue = currentQuestion
+        thirdVC.categoryIndex = categoryIndex
+        thirdVC.jsonData = jsonData
+        thirdVC.numOfQuestions = numOfQuestions
         self.present(thirdVC, animated: false, completion: nil)
     }
-    
+
 }
